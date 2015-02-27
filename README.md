@@ -1,6 +1,12 @@
 Password Generator
 ==================
 
+A minor addition to allow simple passwords using a restricted character set.
+
+---
+
+From the original:
+
 Introduction
 ------------
 This is a very simple application which I built for use with various libraries.

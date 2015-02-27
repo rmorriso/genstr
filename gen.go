@@ -1,4 +1,4 @@
-package pwordgen
+package genpass
 
 import (
     "io"
@@ -7,9 +7,14 @@ import (
 )
 
 var StdChars = []byte("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+,.?/:;{}[]`~")
+var SimpleChars = []byte("ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz23456789-")
 
-func NewPassword(length int) string {
+func Password(length int) string {
     return rand_char(length, StdChars)
+}
+
+func SimplePassword(length int) string {
+    return rand_char(length, SimpleChars)
 }
 
 func rand_char(length int, chars []byte) string {
