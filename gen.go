@@ -1,4 +1,4 @@
-package genpass
+package genstr
 
 import (
     "io"
@@ -8,13 +8,18 @@ import (
 
 var StdChars = []byte("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+,.?/:;{}[]`~")
 var SimpleChars = []byte("ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz23456789-")
+var Digits = []byte("0123456789")
 
-func Password(length int) string {
+func Standard(length int) string {
     return rand_char(length, StdChars)
 }
 
-func SimplePassword(length int) string {
+func Simple(length int) string {
     return rand_char(length, SimpleChars)
+}
+
+func Number(length int) string {
+    return rand_char(length, Digits)
 }
 
 func rand_char(length int, chars []byte) string {

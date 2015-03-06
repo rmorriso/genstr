@@ -1,7 +1,7 @@
-Password Generator
+String Generator
 ==================
 
-A minor addition to allow simple passwords using a restricted character set.
+Renamed to genstr to generalize function. A minor addition to generate strings from common restricted character sets.
 
 ---
 
